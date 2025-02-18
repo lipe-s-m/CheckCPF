@@ -22,11 +22,12 @@
       <h1 class="main__title">Validar CPF</h1>
 
       <form class="form">
-        <p for="form__input">Digite na caixa de texto abaixo o CPF que deseja validar, e clique no botão "CheckCPF".</p>
-        <label for="form__input">
-          <input id="form__input" class="form__input" name="input" type="text" placeholder="Insira o CPF aqui">
-          <button class="form__button--submit" type="submit" aria-label="Validar CPF">CheckCPF</button>
+        <p for="form__input" class="form__descricao">Digite na caixa de texto abaixo o CPF que deseja validar, e clique no botão "CheckCPF".</p>
+        <label for="form__input" id="input-box">
+          <input id="form__input" class="form__input" name="input" inputmode="numeric" placeholder="Insira o CPF aqui" maxlength="14">
+          <button id="button-submit-form" class="form__button--submit" type="submit" aria-label="Validar CPF">CheckCPF</button>
         </label>
+        <!-- <p hidden>CPF VALIDO</p> -->
       </form>
     </main>
     <div class="background"></div>
@@ -38,6 +39,9 @@
       </ul>
     </footer>
   </div>
+  <script type="module" src="./js/script.js"></script>
+  <script type="module" src="./js/validarCpf.js"></script>
+  <script type="module" src="./js/exibirResultado.js"></script>
 </body>
 
 </html>

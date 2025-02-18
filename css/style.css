@@ -85,7 +85,7 @@ body {
   width: 70%;
   gap: 2rem;
 }
-.form p {
+.form__descricao {
   color: white;
   font-size: 2rem;
   text-align: center;
@@ -101,10 +101,12 @@ body {
 }
 .form__input {
   background-color: transparent;
-  border: none;
-  outline: none;
+  font-size: 2rem;
   padding: 1rem 2rem;
   width: 30rem;
+  border: none;
+  outline: none;
+  outline: none;
 }
 .form__input::-moz-placeholder {
   font-size: 2rem;
@@ -126,6 +128,41 @@ body {
   transition: 200ms;
   background-color: #4d4d55;
   cursor: pointer;
+}
+.form__result--valid {
+  color: rgb(129, 255, 103);
+  text-shadow: -0.2rem 0.2rem 0.2rem #4d4d55;
+  font-size: 3.2rem;
+  font-weight: 600;
+}
+.form__result--invalid {
+  color: rgb(253, 58, 58);
+  text-shadow: -0.2rem 0.2rem 0.2rem #4d4d55;
+  font-size: 3.2rem;
+  font-weight: 600;
+}
+.form__button--reset {
+  background-color: rgb(152, 128, 194);
+  color: #fff;
+  font-size: 2.4rem;
+  font-weight: 600;
+  width: 16rem;
+  border: none;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.form__button--reset:hover {
+  transition: 200ms;
+  background-color: rgb(123, 97, 168);
+  cursor: pointer;
+}
+
+.valid {
+  border: 0.6rem solid rgb(83, 202, 78);
+}
+
+.invalid {
+  border: 0.6rem solid rgb(247, 107, 92);
 }
 
 .background {
@@ -179,15 +216,17 @@ body {
     padding: 1rem;
   }
 }
-@media (max-width: 590px) {
+@media (max-width: 598px) {
   .form {
     width: 90%;
   }
   .form p + label {
     padding: 1rem;
+    order: 1;
   }
   .form__input {
     width: 20rem;
+    font-size: 1.8rem;
   }
   .form__input::-moz-placeholder {
     font-size: 1.8rem;
@@ -200,6 +239,9 @@ body {
     width: 14rem;
     padding: 1rem 1.6rem;
   }
+  .form__button--reset {
+    order: 2;
+  }
   .footer__lista {
     width: 100%;
     gap: 0;
@@ -210,10 +252,18 @@ body {
   }
 }
 @media (max-width: 450px) {
+  .header {
+    justify-content: space-between;
+    padding: 1.6rem 4rem;
+  }
+  .header__title {
+    font-size: 2rem;
+  }
   .form {
     width: 98%;
+    gap: 2rem;
   }
-  .form p {
+  .form__descricao {
     font-size: 1.6rem;
   }
   .form p + label {
@@ -221,6 +271,8 @@ body {
   }
   .form__input {
     width: 16rem;
+    font-size: 1.6rem;
+    padding: 1rem;
   }
   .form__input::-moz-placeholder {
     font-size: 1.4rem;
@@ -230,8 +282,23 @@ body {
   }
   .form__button--submit {
     font-size: 1.4rem;
-    width: 11rem;
+    width: 10rem;
+    padding: 0.4rem;
+  }
+  .form__result--valid {
+    font-size: 2.4rem;
+  }
+  .form__result--invalid {
+    font-size: 2.4rem;
+  }
+  .form__button--reset {
+    font-size: 2rem;
+    font-weight: 600;
+    width: 16rem;
     padding: 1rem;
+  }
+  .footer {
+    padding: 2.4rem;
   }
   .footer__lista {
     justify-content: center;

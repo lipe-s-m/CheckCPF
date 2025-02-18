@@ -89,7 +89,7 @@ body {
   justify-content: center;
   width: 70%;
   gap: 2rem;
-  & p {
+  &__descricao {
     color: white;
     font-size: 2rem;
     text-align: center;
@@ -105,10 +105,12 @@ body {
   }
   &__input {
     background-color: transparent;
-    border: none;
-    outline: none;
+    font-size: 2rem;
     padding: 1rem 2rem;
     width: 30rem;
+    border: none;
+    outline: none;
+    outline: none;
     &::placeholder {
       font-size: 2rem;
     }
@@ -128,6 +130,39 @@ body {
       cursor: pointer;
     }
   }
+  &__result--valid {
+    color: rgb(129, 255, 103);
+    text-shadow: -0.2rem 0.2rem 0.2rem #4d4d55;
+    font-size: 3.2rem;
+    font-weight: 600;
+  }
+  &__result--invalid {
+    color: rgb(253, 58, 58);
+    text-shadow: -0.2rem 0.2rem 0.2rem #4d4d55;
+    font-size: 3.2rem;
+    font-weight: 600;
+  }
+  &__button--reset {
+    background-color: rgb(152, 128, 194);
+    color: #fff;
+    font-size: 2.4rem;
+    font-weight: 600;
+    width: 16rem;
+    border: none;
+    padding: 1rem;
+    border-radius: 1rem;
+    &:hover {
+      transition: 200ms;
+      background-color: rgb(123, 97, 168);
+      cursor: pointer;
+    }
+  }
+}
+.valid {
+  border: 0.6rem solid rgb(83, 202, 78);
+}
+.invalid {
+  border: 0.6rem solid rgb(247, 107, 92);
 }
 .background {
   display: flex;
@@ -169,6 +204,7 @@ body {
   }
 }
 
+//responsive
 @media (max-width: 1024px) {
   .footer {
     &__lista {
@@ -185,14 +221,17 @@ body {
   }
 }
 
-@media (max-width: 590px) {
+@media (max-width: 598px) {
   .form {
     width: 90%;
     & p + label {
       padding: 1rem;
+      order: 1;
     }
     &__input {
       width: 20rem;
+      font-size: 1.8rem;
+
       &::placeholder {
         font-size: 1.8rem;
       }
@@ -201,6 +240,9 @@ body {
       font-size: 1.8rem;
       width: 14rem;
       padding: 1rem 1.6rem;
+    }
+    &__button--reset {
+      order: 2;
     }
   }
   .footer {
@@ -216,9 +258,17 @@ body {
 }
 
 @media (max-width: 450px) {
+  .header {
+    justify-content: space-between;
+    padding: 1.6rem 4rem;
+    &__title {
+      font-size: 2rem;
+    }
+  }
   .form {
     width: 98%;
-    & p {
+    gap: 2rem;
+    &__descricao {
       font-size: 1.6rem;
     }
     & p + label {
@@ -226,17 +276,32 @@ body {
     }
     &__input {
       width: 16rem;
+      font-size: 1.6rem;
+      padding: 1rem;
       &::placeholder {
         font-size: 1.4rem;
       }
     }
     &__button--submit {
       font-size: 1.4rem;
-      width: 11rem;
+      width: 10rem;
+      padding: 0.4rem;
+    }
+    &__result--valid {
+      font-size: 2.4rem;
+    }
+    &__result--invalid {
+      font-size: 2.4rem;
+    }
+    &__button--reset {
+      font-size: 2rem;
+      font-weight: 600;
+      width: 16rem;
       padding: 1rem;
     }
   }
   .footer {
+    padding: 2.4rem;
     &__lista {
       justify-content: center;
       gap: 1rem 2rem;
