@@ -31,10 +31,7 @@ body {
   flex-direction: column;
   width: 100%;
   min-height: 100dvh;
-  background-image: url(../images/background/background.webp);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: linear-gradient(to top left, var(--color-primary-dark), var(--color-primary-purple-dark)) no-repeat;
 }
 
 .header {
@@ -136,7 +133,7 @@ body {
   font-weight: 600;
 }
 .form__result--invalid {
-  color: rgb(253, 58, 58);
+  color: rgb(247, 79, 67);
   text-shadow: -0.2rem 0.2rem 0.2rem #4d4d55;
   font-size: 3.2rem;
   font-weight: 600;
@@ -261,7 +258,7 @@ body {
   }
   .form {
     width: 98%;
-    gap: 2rem;
+    gap: 4.8rem;
   }
   .form__descricao {
     font-size: 1.6rem;
@@ -298,7 +295,7 @@ body {
     padding: 1rem;
   }
   .footer {
-    padding: 2.4rem;
+    padding: 1.4rem 2.4rem;
   }
   .footer__lista {
     justify-content: center;
@@ -308,7 +305,7 @@ body {
     order: 2;
   }
   .footer__item a {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     padding: 1rem 0.8rem;
   }
 }/*# sourceMappingURL=style.css.map */

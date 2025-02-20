@@ -30,11 +30,9 @@ input.addEventListener("input", (event) => {
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-
   if (validarCPF(obterValorInput())) {
     resultadoValido();
     InserirBotaoReset();
-
     return;
   }
   resultadoInvalido();

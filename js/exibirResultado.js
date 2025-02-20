@@ -4,9 +4,12 @@ const inputContainer = document.getElementById("input-box");
 
 const buttonResetForm = document.createElement("button");
 const resultMessage = document.createElement("p");
+const descricao = document.querySelector(".form__descricao");
+
 resultMessage.id = "result";
 
 export function resultadoValido() {
+  descricao.hidden = true;
   inputBox.classList = "valid";
   resultMessage.innerText = "CPF VÁLIDO";
   resultMessage.classList.remove("form__result--invalid");
@@ -15,6 +18,7 @@ export function resultadoValido() {
 }
 
 export function resultadoInvalido() {
+  descricao.hidden = true;
   inputBox.classList = "invalid";
   resultMessage.innerText = "CPF INVÁLIDO";
   resultMessage.classList.remove("form__result--valid");
@@ -29,7 +33,7 @@ export function InserirBotaoReset() {
 }
 
 export function limparTela() {
-  console.log("limpando");
+  descricao.hidden = false;
   inputContainer.classList.remove("invalid");
   inputContainer.classList.remove("valid");
   if (document.getElementById("result")) {
